@@ -1,0 +1,16 @@
+#orderButton {
+    background-color: #F7AA05;
+    padding: 10px 20px;
+    color: white;
+    border: 0;
+    box-shadow: 1px -8px 50px rgb(0, 0, 0);
+    font-family: 'Gotham2', 'sans-serif';
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#orderButton:hover {
+    transition: 0.4s ease-in-out;
+    background-color: #db9602;
+    color: rgb(223, 223, 223);
+}
