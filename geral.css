@@ -31,7 +31,7 @@
 #menu {
     display: flex;
     justify-content: space-evenly;
-    padding-top: 20px;
+    padding-top: 30px;
     font-family: 'Gotham', 'sans-serif';
     font-size: 1.3em;
 }
@@ -41,6 +41,7 @@
     gap: 50px;
     list-style: none;
     padding-top: 10px;
+    margin-left: 150px;
 }
 
 li {
@@ -49,6 +50,10 @@ li {
 
 li > a {
     text-decoration: none;
+    color: var(--orange)
+}
+
+li > a:hover {
     color: white;
 }
 
@@ -61,7 +66,6 @@ position: absolute;
 right: 0px;
 top: 25px;
 left: 0px;
-
 }
 
 nav > ul > li > a:hover::after {
