@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="geral.css">
     <link rel="stylesheet" href="buttons.css">
     <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="burgers.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
     <div id="background">
-        
+        <img id='burgerOne' src="imgs/burgerOne.png" alt="burger">
         <header>
 
             <nav id="menu">
@@ -39,7 +40,14 @@
                     <button class="socialMedia" id="facebookButton"></button>
                 <input id='readmoreButton' type="button" value="READ MORE">
             </div>
+
+            <div id="buttons-container-change-img">
+                <button type="button" class="changeImgButton" id="prevButton"><i class="fa-solid fa-arrow-left"></i></button>
+                <button type="button" class="changeImgButton" id="nextButton"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
     </div>
+
+<script src="script.js"></script>
 
 </body>
 </html>

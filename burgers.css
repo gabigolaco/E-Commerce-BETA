@@ -1,0 +1,7 @@
+#burgerOne {
+    display: none;
+    width: 600px;
+    position: absolute;
+    right: -600px;
+    top: 115px;
+}
