@@ -9,19 +9,21 @@ prevButton.addEventListener('click', () => {})
 
 window.addEventListener('load', loadAnimation)
 
-function loadAnimation() {
-let burgerOne = document.getElementById('burgerOne')   
- let position = -600
- burgerOne.style.right = position + 'px'
- burgerOne.style.display = 'flex'
+    function loadAnimation() {
+    let burgerOne = document.getElementById('burgerOne')   
+    let position = 50
+    burgerOne.style.display = 'flex'
+    burgerOne.style.transition = '1s'
+    
 
- let anim = setInterval(() => {
-    if (position >= 115) {
-        clearInterval(anim)
-    } else {
-        position += 10
-        burgerOne.style.right = position + 'px'
+    burgerOne.style.transform = `translateX(${position}px)`;
+
+    let anim = setInterval(() => {
+        if (position <= -700) {
+            clearInterval(anim)
+        } else {
+            position -= 30
+            burgerOne.style.transform = `translateX(${position}px)`;
+        }
+    }, 1)
     }
-}, 1)
-burgerOne.style.transition = '1s'
-}
