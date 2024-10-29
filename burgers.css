@@ -5,3 +5,17 @@
     right: -600px;
     top: 115px;
 }
+#burgerTwo {
+    display: none;
+    width: 600px;
+    position: absolute;
+    right: -600px;
+    top: 250px;
+}
+#burgerThree {
+    display: none;
+    width: 600px;
+    position: absolute;
+    right: -600px;
+    top: 175px;
+}
