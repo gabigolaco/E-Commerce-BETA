@@ -71,6 +71,7 @@ function nextImg() {
 
 function animationTwo(posicao) {
     burgerTwo.style.display = 'flex'
+    burgerTwo.style.top =  85 + 'px'
 
     setTimeout(() => {
         let anim = setInterval(() => {
