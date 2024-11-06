@@ -1,9 +1,9 @@
 #burgerOne {
     display: none;
-    width: 600px;
+    width: 650px;
     position: absolute;
     right: -600px;
-    top: 115px;
+    top: 80px;
 }
 #burgerTwo {
     display: none;
@@ -14,8 +14,16 @@
 }
 #burgerThree {
     display: none;
-    width: 600px;
+    width: 650px;
     position: absolute;
-    right: -600px;
-    top: 175px;
+    right: -640px;
+    top: 150px;
+}
+
+#burgerFour {
+    display: none;
+    width: 690px;
+    position: absolute;
+    right: -640px;
+    top: 200px;
 }
