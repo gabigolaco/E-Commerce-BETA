@@ -9,7 +9,7 @@
     display: none;
     width: 600px;
     position: absolute;
-    right: -600px;
+    right: -640px;
     top: 250px;
 }
 #burgerThree {
@@ -24,6 +24,6 @@
     display: none;
     width: 690px;
     position: absolute;
-    right: -640px;
+    right: -660px;
     top: 200px;
 }
