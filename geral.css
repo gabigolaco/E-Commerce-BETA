@@ -21,7 +21,6 @@
 }
 
 body {
-    overflow-x: hidden;
 }
 
 #background {
@@ -36,7 +35,7 @@ body {
 #menu {
     display: flex;
     justify-content: space-evenly;
-    padding-top: 30px;
+    padding-top: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 1.2em;
@@ -48,7 +47,7 @@ body {
     gap: 50px;
     list-style: none;
     padding-top: 10px;
-    margin-left: 150px;
+    margin-left: 9em;
 }
 
 li {
@@ -71,7 +70,7 @@ height: 5px;
 background-color: var(--orange);
 position: absolute;
 right: 0px;
-top: 25px;
+top: 0.9em;
 left: 0px;
 }
 
@@ -82,8 +81,9 @@ nav > ul > li > a:hover::after {
     height: 5px;
     background-color: var(--orange);
     position: absolute;
-    bottom: 1px;
-    right: 0px;
+    top: 1.1em;
+    bottom: 0px;
+    right: -20px;
     left: 0px;
     }
 
@@ -91,7 +91,7 @@ nav > ul > li > a:hover::after {
 width: 630px;
 height: 50px;
 position: absolute;
-bottom: 260px;
+bottom: 16em;
 left: 0;
 display: flex;
 gap: 20px; 

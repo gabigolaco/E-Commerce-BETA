@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="burgers.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="phone.css" media="(min-width: 320px) and (max-width: 600px)">
 </head>
 <body>
+
 
     <div id="background">
         <img id='burgerOne' src="imgs/burgerOne.png" alt="burger">
@@ -19,9 +21,11 @@
         <img id='burgerFour' src="imgs/a4-Photoroom.png" alt="burger">
         <header>
 
+            <button type="button" id="burgerMenuButton"><i class="fa-solid fa-bars"></i></button>
+
             <nav id="menu">
 
-                <img src="imgs/Logo.png" alt="" style="width: 130px; position: absolute; top: 0; left: 40px;">
+                <img src="imgs/Logo.png" alt="" id="logo" style="width: 130px; position: absolute; top: 0; left: 40px;">
 
                 <ul>
                    
@@ -51,6 +55,6 @@
     </div>
 
 <script src="script.js"></script>
-
+<script src="phone.js"></script>
 </body>
 </html>

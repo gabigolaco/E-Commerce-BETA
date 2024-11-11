@@ -1,0 +1,103 @@
+#background {
+    width: 100%;
+    height: 790px;
+    background-image: url(imgs/Novo\ Projeto.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#readmore-container {
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    bottom: 23em;
+    left: 1em;
+    display: flex;
+    gap: 20px; 
+    justify-content: start;
+    }
+
+    #readmoreButton {
+        background-color: #f79a05;
+        padding: 5px 10px 5px 10px;
+        color: rgb(243, 243, 243);
+        border: 0;
+        box-shadow: 1px -8px 50px rgb(0, 0, 0);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        border-radius: 1.5px;
+        cursor: pointer;
+        width: 120px;
+        height: 45px;
+        margin-left: 1em;
+        text-align: center;
+    }
+
+    #buttons-container-change-img {
+        display: flex;
+        justify-content: space-around;
+        background-color: transparent;
+        position: absolute;
+        left: -3.5em;
+        bottom: 60px;
+        color: rgb(243, 243, 243);
+        border: 0;
+        width: 450px;
+        height: 30px;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #menu {
+        display: none;
+        justify-content: space-evenly;
+        padding-top: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 1.2em;
+        text-shadow: 0px 0px 11px rgb(0 0 0 / 67%);
+    }
+    
+    #burgerMenuButton {
+        display: flex;
+        position: absolute;
+        top: 1.2em;
+        left: 6.3em;
+        font-size: 1.8em;
+        background-color: transparent;
+        border: 0;
+        color: rgb(243, 243, 243);
+    }
+
+    #burgerOne {
+        display: none;
+        width: 220px;
+        position: absolute;
+        right: -640px;
+        top: 26em;
+    }
+    #burgerTwo {
+        display: none;
+        width: 300px;
+        position: absolute;
+        right: -640px;
+        top: 22em;
+    }
+    #burgerThree {
+        display: none;
+        width: 300px;
+        position: absolute;
+        right: -640px;
+        top: 22em;
+    }
+    
+    #burgerFour {
+        display: none;
+        width: 300px;
+        position: absolute;
+        right: -660px;
+        top: 22em;
+    }

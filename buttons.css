@@ -72,8 +72,8 @@
     justify-content: space-around;
     background-color: transparent;
     position: absolute;
-    left: 51%;
-    bottom: 60px;
+    right: 11em;
+    bottom: 4em;
     color: rgb(243, 243, 243);
     border: 0;
     width: 450px;
@@ -89,6 +89,10 @@
     color: rgb(243, 243, 243);
     border-radius: 1.5px;
     font-size: 1.2em;
-    margin-left: 40px;
+    margin-left: 3em;
     cursor: pointer;
+}
+
+#burgerMenuButton {
+    display: none;
 }
