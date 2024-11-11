@@ -1,17 +1,14 @@
-**<h1> (IN DEVELOPMENT</h1>**
+**<h1> (IN DEVELOPMENT)</h1>**
 
 <h1>📝 Introduction</h1>
 
-**<h2> (IN DEVELOPMENT</h2>**
+**<h2> (IN DEVELOPMENT)</h2>**
 
 ![image](https://github.com/user-attachments/assets/23407d8f-293c-4f65-97c0-de3186d5c0fc)
 
-
-![desktop (1)](https://github.com/user-attachments/assets/164e6f26-b374-4a7c-a7a4-5f739d6d1b8b)
-
 # 📂 Features
 
-**<h2> (IN DEVELOPMENT</h2>**
+**<h2> (IN DEVELOPMENT)</h2>**
 
 
 ---
