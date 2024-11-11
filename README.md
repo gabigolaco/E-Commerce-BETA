@@ -4,7 +4,8 @@
 
 **<h2> (IN DEVELOPMENT)</h2>**
 
-![image](https://github.com/user-attachments/assets/23407d8f-293c-4f65-97c0-de3186d5c0fc)
+![image](https://github.com/user-attachments/assets/3ab10feb-d288-4695-8796-268bf8c7db53)
+
 
 # 📂 Features
 
