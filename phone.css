@@ -12,7 +12,7 @@
     height: 50px;
     position: absolute;
     bottom: 23em;
-    left: 1em;
+    left: -0.3em;
     display: flex;
     gap: 20px; 
     justify-content: start;
@@ -48,36 +48,51 @@
     }
 
     #logo {
-        display: none;
+        display: flex;
+        position: absolute;
+        top: -5em;
+        left: 16.5em;
     }
 
     #menu {
-        display: none;
+        display: flex;
+        position: absolute;
+        top: 6em;
+        left: -8em;
+        gap: 20px;
+        flex-direction: column;
         justify-content: space-evenly;
+        align-items: center;
         padding-top: 30px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 600;
-        font-size: 1.2em;
+        font-size: 0.9em;
         text-shadow: 0px 0px 11px rgb(0 0 0 / 67%);
     }
-    
-    #burgerMenuButton {
-        display: flex;
-        position: absolute;
-        top: 1.2em;
-        left: 6.3em;
-        font-size: 1.8em;
-        background-color: transparent;
-        border: 0;
+
+    #orderButton {
+        background-color: #F7AA05;
+        padding: 5px 10px 5px 10px;
         color: rgb(243, 243, 243);
+        border: 0;
+        box-shadow: 1px -8px 50px rgb(0, 0, 0);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        border-radius: 2px;
+        cursor: pointer;
+        width: 150px;
+        height: 45px;
+        position: relative;
+        left: 6em;
     }
+    
 
     #burgerOne {
         display: none;
-        width: 220px;
+        width: 235px;
         position: absolute;
         right: -640px;
-        top: 26em;
+        top: 25em;
     }
     #burgerTwo {
         display: none;
