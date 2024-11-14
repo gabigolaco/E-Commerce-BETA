@@ -3,14 +3,14 @@ let readMoreButton = document.getElementById('readmoreButton')
 let nextButton = document.getElementById('nextButton')
 let prevButton = document.getElementById('prevButton')
 
-let burgers = [1]
 
+if (window.innerWidth > 720 && window.innerWidth < 2000) {     
+    
+let burgers = [1]
 let burgerOne = document.getElementById('burgerOne')   
 let burgerTwo = document.getElementById('burgerTwo')   
 let burgerThree = document.getElementById('burgerThree') 
 let burgerFour = document.getElementById('burgerFour')  
-
-if (window.innerWidth > 720 && window.innerWidth < 2000) {     
 
     orderButton.addEventListener('click', () => {})
     readMoreButton.addEventListener('click', () => {})

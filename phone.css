@@ -96,14 +96,14 @@
     }
     #burgerTwo {
         display: none;
-        width: 300px;
+        width: 235px;
         position: absolute;
         right: -640px;
         top: 22em;
     }
     #burgerThree {
         display: none;
-        width: 300px;
+        width: 235px;
         position: absolute;
         right: -640px;
         top: 22em;
@@ -111,7 +111,7 @@
     
     #burgerFour {
         display: none;
-        width: 300px;
+        width: 235px;
         position: absolute;
         right: -660px;
         top: 22em;

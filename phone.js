@@ -1,4 +1,9 @@
 if (window.innerWidth > 300 && window.innerWidth < 600) {
+let burgers = [1]
+let burgerOne = document.getElementById('burgerOne')   
+let burgerTwo = document.getElementById('burgerTwo')   
+let burgerThree = document.getElementById('burgerThree') 
+let burgerFour = document.getElementById('burgerFour')  
 
 window.addEventListener('load', loadAnim)
 
@@ -29,7 +34,6 @@ function loadAnim() {
             } else {
                 position -= 30
                 burgerOne.style.left = position + 'px'
-                console.log(position)
             }
     }, 10)
 }
