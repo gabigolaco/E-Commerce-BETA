@@ -1,23 +1,23 @@
-if (window.innerWidth > 720 && window.innerWidth < 2000) { 
-    let orderButton = document.getElementById('orderButton')
-    let readMoreButton = document.getElementById('readmoreButton')
-    let nextButton = document.getElementById('nextButton')
-    let prevButton = document.getElementById('prevButton')
-    
-    let burgers = [1]
-    
-    orderButton.addEventListener('click', () => {})
-    readMoreButton.addEventListener('click', () => {})
-    nextButton.addEventListener('click', nextImg)
-    prevButton.addEventListener('click', prevImg)
-    
-    window.addEventListener('load', loadAnimation)
-    
-    let burgerOne = document.getElementById('burgerOne')   
-    let burgerTwo = document.getElementById('burgerTwo')   
-    let burgerThree = document.getElementById('burgerThree') 
-    let burgerFour = document.getElementById('burgerFour')  
-    
+let orderButton = document.getElementById('orderButton')
+let readMoreButton = document.getElementById('readmoreButton')
+let nextButton = document.getElementById('nextButton')
+let prevButton = document.getElementById('prevButton')
+
+let burgers = [1]
+
+orderButton.addEventListener('click', () => {})
+readMoreButton.addEventListener('click', () => {})
+nextButton.addEventListener('click', nextImg)
+prevButton.addEventListener('click', prevImg)
+
+window.addEventListener('load', loadAnimation)
+
+let burgerOne = document.getElementById('burgerOne')   
+let burgerTwo = document.getElementById('burgerTwo')   
+let burgerThree = document.getElementById('burgerThree') 
+let burgerFour = document.getElementById('burgerFour')  
+
+if (window.innerWidth > 720 && window.innerWidth < 2000) {     
     function loadAnimation() {
         nextButton.disabled = true
         prevButton.disabled = true
