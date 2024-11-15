@@ -1,18 +1,20 @@
 if (window.innerWidth > 300 && window.innerWidth < 600) {
+
 let burgers = [1]
 let burgerOne = document.getElementById('burgerOne')   
 let burgerTwo = document.getElementById('burgerTwo')   
 let burgerThree = document.getElementById('burgerThree') 
 let burgerFour = document.getElementById('burgerFour')  
 
-window.addEventListener('load', loadAnim)
+window.addEventListener('load', loadAnimation)
 
 orderButton.addEventListener('click', () => {})
 readMoreButton.addEventListener('click', () => {})
-nextButton.addEventListener('click', nextImg2)
+nextButton.addEventListener('click', nextImg)
 prevButton.addEventListener('click', () => {})
 
-function loadAnim() {
+function loadAnimation() {
+    
     nextButton.disabled = true
     prevButton.disabled = true
 
@@ -38,7 +40,7 @@ function loadAnim() {
     }, 10)
 }
 
-function nextImg2() {
+function nextImg() {
     let position = 600
     
         nextButton.disabled = true
@@ -58,7 +60,7 @@ function nextImg2() {
                     clearInterval(anim)
                     burgers.shift()
                     burgers.push(2)
-                    animationNext2(position)
+                    animationNext(position)
                 } else {
                     position += 200
                     burgerOne.style.left = position + 'px'
@@ -85,7 +87,7 @@ function nextImg2() {
                     clearInterval(anim)
                     burgers.shift()
                     burgers.push(3)
-                    animationNext2(position)
+                    animationNext(position)
                     nextButton.disabled = true
                     setTimeout(() => {
                         nextButton.disabled = false
@@ -116,7 +118,7 @@ function nextImg2() {
                     clearInterval(anim)
                     burgers.shift()
                     burgers.push(4)
-                    animationNext2(position)
+                    animationNext(position)
                     nextButton.disabled = true
                     setTimeout(() => {
                         nextButton.disabled = false
@@ -147,7 +149,7 @@ function nextImg2() {
                     clearInterval(anim)
                     burgers.shift()
                     burgers.push(1)
-                    animationNext2(position)
+                    animationNext(position)
                     nextButton.disabled = true
                     setTimeout(() => {
                         nextButton.disabled = false
@@ -168,10 +170,10 @@ function nextImg2() {
     }
 }
 
-function animationNext2(posicao) {
+function animationNext(posicao) {
     if (burgers.includes(1)) {
         burgerOne.style.display = 'flex'
-
+        console.log(burgers)
         setTimeout(() => {
 
             let anim = setInterval(() => {
@@ -189,7 +191,8 @@ function animationNext2(posicao) {
 
     if (burgers.includes(2)) {
         burgerTwo.style.display = 'flex'
-    
+        console.log(burgers)
+
         setTimeout(() => {
             let anim = setInterval(() => {
                 burgerTwo.style.transition = '2s'
