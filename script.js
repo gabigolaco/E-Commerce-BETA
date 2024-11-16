@@ -86,83 +86,27 @@ let burgerFour = document.getElementById('burgerFour')
         }
         
         function animationNext(posicao) {
-        
-            if (burgers.includes(1)) {
-                cooldown(nextButton, prevButton)
 
-                burgerOne.style.display = 'flex'
-                burgerOne.style.top =  85 + 'px'
+        let currentBurger = getCurrentBurger()
+                        cooldown(nextButton, prevButton)
+
+                currentBurger.style.display = 'flex'
+                currentBurger.style.top =  85 + 'px'
             
                 setTimeout(() => {
                     let anim = setInterval(() => {
-                        burgerOne.style.transition = '2s'
+                        currentBurger.style.transition = '2s'
                         if (posicao <= 600) {
                             clearInterval(anim)
-                            burgerOne.style.width = 650 + 'px'
+                            console.log(burgers)
+                            currentBurger.style.width = 650 + 'px'
+                            if (burgers[0] > 4) burgers[0] = 1;
                         } else {
                             posicao -= 15
-                            burgerOne.style.left = posicao + 'px'
+                            currentBurger.style.left = posicao + 'px'
                         }
                     }, 10)
                 }, 1500);
-            }
-        
-            if (burgers.includes(2)) {
-                cooldown(nextButton, prevButton)
-
-                burgerTwo.style.display = 'flex'
-                burgerTwo.style.top =  85 + 'px'
-            
-                setTimeout(() => {
-                    let anim = setInterval(() => {
-                        burgerTwo.style.transition = '2s'
-                        if (posicao <= 600) {
-                            clearInterval(anim)
-                        } else {
-                            posicao -= 15
-                            burgerTwo.style.left = posicao + 'px'
-                        }
-                    }, 10)
-                }, 1500);
-            }
-        
-            if (burgers.includes(3)) {
-                cooldown(nextButton, prevButton)
-
-                burgerThree.style.display = 'flex'
-                burgerThree.style.top =  85 + 'px'
-            
-                setTimeout(() => {
-                    let anim = setInterval(() => {
-                        burgerThree.style.transition = '2s'
-                        if (posicao <= 600) {
-                            clearInterval(anim)
-                        } else {
-                            posicao -= 15
-                            burgerThree.style.left = posicao + 'px'
-                        }
-                    }, 10)
-                }, 1500);
-            }
-           
-            if (burgers.includes(4)) {
-                cooldown(nextButton, prevButton)
-
-                burgerFour.style.display = 'flex'
-                burgerFour.style.top =  85 + 'px'
-            
-                setTimeout(() => {
-                    let anim = setInterval(() => {
-                        burgerFour.style.transition = '2s'
-                        if (posicao <= 600) {
-                            clearInterval(anim)
-                        } else {
-                            posicao -= 15
-                            burgerFour.style.left = posicao + 'px'
-                        }
-                    }, 10)
-                }, 1500);
-            }   
         }
         
         function prevImg() {
@@ -176,8 +120,8 @@ let burgerFour = document.getElementById('burgerFour')
      let anim = setInterval(() => {
         if (position >= 1400) {
             clearInterval(anim)
-            burgers.push(burgers.shift() + 1)
-            if (burgers[0] > 4) burgers[0] = 1;
+            if (burgers[0] === 1) burgers[0] = 5;
+            burgers.push(burgers.shift() - 1)
             animationNext(position)
         } else {
             position += 200
