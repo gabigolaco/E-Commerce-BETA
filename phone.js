@@ -13,13 +13,6 @@ readMoreButton.addEventListener('click', () => {})
 nextButton.addEventListener('click', nextImg)
 prevButton.addEventListener('click', prevImg)
 
-function cooldown(...button) {
-    button.forEach(botao => botao.disabled = true)
-    setTimeout(() => {
-        button.forEach(botao => botao.disabled = false)
-    }, 3000);
-}
-
 function getCurrentBurger() {
     switch (burgers[0]) {
         case 1: return burgerOne;
