@@ -11,17 +11,30 @@ window.addEventListener('load', loadAnimation)
 orderButton.addEventListener('click', () => {})
 readMoreButton.addEventListener('click', () => {})
 nextButton.addEventListener('click', nextImg)
-prevButton.addEventListener('click', () => {})
+prevButton.addEventListener('click', prevImg)
+
+function cooldown(...button) {
+    button.forEach(botao => botao.disabled = true)
+    setTimeout(() => {
+        button.forEach(botao => botao.disabled = false)
+    }, 3000);
+}
+
+function getCurrentBurger() {
+    switch (burgers[0]) {
+        case 1: return burgerOne;
+        case 2: return burgerTwo;
+        case 3: return burgerThree;
+        case 4: return burgerFour;
+        default: return burgerOne;
+    }
+}
+
+
 
 function loadAnimation() {
     
-    nextButton.disabled = true
-    prevButton.disabled = true
-
-    setTimeout (() => {
-        nextButton.disabled = false
-        prevButton.disabled = false
-    }, 2000)
+    cooldown(nextButton, prevButton)
 
     let position = 2000
     burgerOne.style.transition = '1s'
@@ -43,30 +56,24 @@ function loadAnimation() {
 function nextImg() {
     let position = 600
     
-        nextButton.disabled = true
-        
-        setTimeout(() => {
-            nextButton.disabled = false // COOLDOWN
-        }, 2000);
-    
-        if (burgers.includes(1)) {
-            burgerOne.style.transition = '2s'
-            nextButton.disabled = true
-            setTimeout(() => {
-            nextButton.disabled = false // COOLDOWN
-        }, 2000);
+    cooldown(nextButton, prevButton)
+
+    let currentBurger = getCurrentBurger()
+
+         currentBurger.style.transition = '2s'
+         
             let anim = setInterval(() => {
                 if (position >= 1400) {
                     clearInterval(anim)
-                    burgers.shift()
-                    burgers.push(2)
+                    burgers.push(burgers.shift() + 1)
+                    if (burgers[0] > 4) burgers[0] = 1
                     animationNext(position)
                 } else {
-                    position += 200
-                    burgerOne.style.left = position + 'px'
+                    position += 50
+                    currentBurger.style.left = position + 'px'
                     console.log(position)
                     setTimeout(() => {
-                        burgerOne.style.display = 'none'
+                        currentBurger.style.display = 'none'
                     }, 1500);
     
     
@@ -74,258 +81,58 @@ function nextImg() {
         }, 10)
         } 
     
-        if (burgers.includes(2)) {
-            burgerTwo.style.transition = '2s'
-            nextButton.disabled = true
-        
-        setTimeout(() => {
-            nextButton.disabled = false // COOLDOWN
-        }, 2000);
-    
-            let anim = setInterval(() => {
-                if (position >= 1400) {
-                    clearInterval(anim)
-                    burgers.shift()
-                    burgers.push(3)
-                    animationNext(position)
-                    nextButton.disabled = true
-                    setTimeout(() => {
-                        nextButton.disabled = false
-                    }, 2000);
-                } else {
-                    position += 200
-                    burgerTwo.style.left = position + 'px'
-                    console.log(position)
-                    setTimeout(() => {
-                        burgerTwo.style.display = 'none'
-                    }, 1500);
-    
-    
-                }
-        }, 10)
         }
     
-        if (burgers.includes(3)) {
-            burgerThree.style.transition = '2s'
-            nextButton.disabled = true
-        
-        setTimeout(() => {
-            nextButton.disabled = false // COOLDOWN
-        }, 2000);
-    
-            let anim = setInterval(() => {
-                if (position >= 1400) {
-                    clearInterval(anim)
-                    burgers.shift()
-                    burgers.push(4)
-                    animationNext(position)
-                    nextButton.disabled = true
-                    setTimeout(() => {
-                        nextButton.disabled = false
-                    }, 2000);
-                } else {
-                    position += 200
-                    burgerThree.style.left = position + 'px'
-                    console.log(position)
-                    setTimeout(() => {
-                        burgerThree.style.display = 'none'
-                    }, 1500);
-    
-    
-                }
-        }, 10)
-        }
-    
-        if (burgers.includes(4)) {
-            burgerFour.style.transition = '2s'
-            nextButton.disabled = true
-        
-        setTimeout(() => {
-            nextButton.disabled = false // COOLDOWN
-        }, 2000);
-    
-            let anim = setInterval(() => {
-                if (position >= 1400) {
-                    clearInterval(anim)
-                    burgers.shift()
-                    burgers.push(1)
-                    animationNext(position)
-                    nextButton.disabled = true
-                    setTimeout(() => {
-                        nextButton.disabled = false
-                    }, 2000);
-                } else {
-                    position += 200
-                    burgerFour.style.left = position + 'px'
-                    console.log(position)
-                    setTimeout(() => {
-                        burgerFour.style.display = 'none'
-                    }, 1500);
-    
-    
-                }
-        }, 10)
-        }
-    
-    }
-}
 
 function animationNext(posicao) {
-    if (burgers.includes(1)) {
-        burgerOne.style.display = 'flex'
-        console.log(burgers)
+
+    cooldown(nextButton, prevButton)
+
+    let currentBurger = getCurrentBurger()
+     currentBurger.style.display = 'flex'
+     currentBurger.style.width = 235 + 'px'
+     currentBurger.style.top = 402 + 'px'
+     burgerFour.style.width = 250 + 'px'
+     currentBurger.style.transition = '2s'
+
         setTimeout(() => {
 
             let anim = setInterval(() => {
-                burgerOne.style.transition = '2s'
-                if (posicao <= 600) {
+                if (posicao <= 80) {
                     clearInterval(anim)
-                    burgerOne.style.width = 650 + 'px'
                 } else {
                     posicao -= 15
-                    burgerOne.style.left = posicao + 'px'
+                    currentBurger.style.left = posicao + 'px'
                 }
             }, 10)
         }, 1500);
-    }
 
-    if (burgers.includes(2)) {
-        burgerTwo.style.display = 'flex'
-        console.log(burgers)
 
-        setTimeout(() => {
-            let anim = setInterval(() => {
-                burgerTwo.style.transition = '2s'
-                if (posicao <= 600) {
-                    clearInterval(anim)
-                } else {
-                    posicao -= 15
-                    burgerTwo.style.left = posicao + 'px'
-                }
-            }, 10)
-        }, 1500);
-    }
-
-    if (burgers.includes(3)) {
-        burgerThree.style.display = 'flex'
-        burgerThree.style.top =  85 + 'px'
-    
-        setTimeout(() => {
-            let anim = setInterval(() => {
-                burgerThree.style.transition = '2s'
-                if (posicao <= 600) {
-                    clearInterval(anim)
-                } else {
-                    posicao -= 15
-                    burgerThree.style.left = posicao + 'px'
-                }
-            }, 10)
-        }, 1500);
-    }
-   
-    if (burgers.includes(4)) {
-        burgerFour.style.display = 'flex'
-        burgerFour.style.top =  85 + 'px'
-    
-        setTimeout(() => {
-            let anim = setInterval(() => {
-                burgerFour.style.transition = '2s'
-                if (posicao <= 600) {
-                    clearInterval(anim)
-                } else {
-                    posicao -= 15
-                    burgerFour.style.left = posicao + 'px'
-                }
-            }, 10)
-        }, 1500);
-    }   
 }
 
 function prevImg() {
     let position = 600
-    
-    prevButton.disabled = true
 
+    cooldown(nextButton, prevButton)
+
+let currentBurger = getCurrentBurger()
+currentBurger.style.transition = '2s';
+
+let anim = setInterval(() => {
+if (position >= 1400) {
+    clearInterval(anim)
+    if (burgers[0] === 1) burgers[0] = 5;
+    burgers.push(burgers.shift() - 1)
+    animationNext(position)
+} else {
+    position += 200
+    currentBurger.style.left = position + 'px'
+    console.log(position)
     setTimeout(() => {
-        prevButton.disabled = false // COOLDOWN
-    }, 3000);
-
-    if (burgers.includes(1)) {
-        let anim = setInterval(() => {
-            if (position >= 1400) {
-                clearInterval(anim)
-                burgers.shift()
-                burgers.push(4)
-                animationNext(position)
-            } else {
-                position += 200
-                burgerOne.style.left = position + 'px'
-                console.log(position)
-                setTimeout(() => {
-                    burgerOne.style.display = 'none'
-                }, 1500);
-
-
-            }
-    }, 10)
-    }
-
-    if (burgers.includes(2)) {
-        let anim = setInterval(() => {
-            if (position >= 1400) {
-                clearInterval(anim)
-                burgers.shift()
-                burgers.push(1)
-                animationNext(position)
-            } else {
-                position += 200
-                burgerTwo.style.left = position + 'px'
-                console.log(position)
-                setTimeout(() => {
-                    burgerTwo.style.display = 'none'
-                }, 1500);
-
-
-            }
-    }, 10)
-    }
-
-    if (burgers.includes(3)) {
-        let anim = setInterval(() => {
-            if (position >= 1400) {
-                clearInterval(anim)
-                burgers.shift()
-                burgers.push(2)
-                animationNext(position)
-            } else {
-                position += 200
-                burgerThree.style.left = position + 'px'
-                console.log(position)
-                setTimeout(() => {
-                    burgerThree.style.display = 'none'
-                }, 1500);
-
-
-            }
-    }, 10)
-    }
-
-    if (burgers.includes(4)) {
-        let anim = setInterval(() => {
-            if (position >= 1400) {
-                clearInterval(anim)
-                burgers.shift()
-                burgers.push(3)
-                animationNext(position)
-            } else {
-                position += 200
-                burgerFour.style.left = position + 'px'
-                console.log(position)
-                setTimeout(() => {
-                    burgerFour.style.display = 'none'
-                }, 1500);
-            }
-    }, 10)
-    }
-        
+        currentBurger.style.display = 'none'
+    }, 1500);
 }
+}, 10)
+
+}
+

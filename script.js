@@ -92,15 +92,14 @@ let burgerFour = document.getElementById('burgerFour')
 
                 currentBurger.style.display = 'flex'
                 currentBurger.style.top =  85 + 'px'
+                currentBurger.style.width = 650 + 'px'
+                burgerFour.style.width = 700 + 'px'
+                currentBurger.style.transition = '2s'
             
                 setTimeout(() => {
                     let anim = setInterval(() => {
-                        currentBurger.style.transition = '2s'
                         if (posicao <= 600) {
                             clearInterval(anim)
-                            console.log(burgers)
-                            currentBurger.style.width = 650 + 'px'
-                            if (burgers[0] > 4) burgers[0] = 1;
                         } else {
                             posicao -= 15
                             currentBurger.style.left = posicao + 'px'

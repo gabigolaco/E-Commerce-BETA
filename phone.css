@@ -14,8 +14,7 @@
     bottom: 23em;
     left: -0.3em;
     display: flex;
-    gap: 20px; 
-    justify-content: start;
+    justify-content: center;
     }
 
     #readmoreButton {
@@ -111,7 +110,7 @@
     
     #burgerFour {
         display: none;
-        width: 235px;
+        width: 250px;
         position: absolute;
         right: -660px;
         top: 22em;
