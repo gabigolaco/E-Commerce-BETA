@@ -48,7 +48,7 @@ let burgerFour = document.getElementById('burgerFour')
         
         let anim = setInterval(() => {
                 burgerOne.style.display = 'flex'
-                if (position <= 600) {
+                if (position <= 850) {
                     clearInterval(anim)
                 } else {
                     position -= 30
@@ -65,7 +65,7 @@ let burgerFour = document.getElementById('burgerFour')
      currentBurger.style.transition = '2s';
 
      let anim = setInterval(() => {
-        if (position >= 1400) {
+        if (position >= 2000) {
             clearInterval(anim)
             burgers.push(burgers.shift() + 1)
             if (burgers[0] > 4) burgers[0] = 1;
@@ -91,14 +91,13 @@ let burgerFour = document.getElementById('burgerFour')
                         cooldown(nextButton, prevButton)
 
                 currentBurger.style.display = 'flex'
-                currentBurger.style.top =  85 + 'px'
-                currentBurger.style.width = 650 + 'px'
-                burgerFour.style.width = 700 + 'px'
+                currentBurger.style.width = 890 + 'px'
+                burgerFour.style.width = 970 + 'px'
                 currentBurger.style.transition = '2s'
             
                 setTimeout(() => {
                     let anim = setInterval(() => {
-                        if (posicao <= 600) {
+                        if (posicao <= 775) {
                             clearInterval(anim)
                         } else {
                             posicao -= 15
@@ -117,7 +116,7 @@ let burgerFour = document.getElementById('burgerFour')
      currentBurger.style.transition = '2s';
 
      let anim = setInterval(() => {
-        if (position >= 1400) {
+        if (position >= 2000) {
             clearInterval(anim)
             if (burgers[0] === 1) burgers[0] = 5;
             burgers.push(burgers.shift() - 1)

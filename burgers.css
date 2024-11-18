@@ -1,29 +1,29 @@
 #burgerOne {
     display: none;
-    width: 650px;
+    width: 890px;
     position: absolute;
-    right: -600px;
-    top: 80px;
+    right: -900px;
+    top: 140px;
 }
 #burgerTwo {
     display: none;
-    width: 600px;
+    width: 890px;
     position: absolute;
-    right: -640px;
-    top: 250px;
+    right: -900px;
+    top: 140px;
 }
 #burgerThree {
     display: none;
-    width: 650px;
+    width: 890px;
     position: absolute;
-    right: -640px;
+    right: -900px;
     top: 150px;
 }
 
 #burgerFour {
     display: none;
-    width: 690px;
+    width: 890px;
     position: absolute;
-    right: -660px;
-    top: 200px;
+    right: -900px;
+    top: 140px;
 }

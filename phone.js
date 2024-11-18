@@ -108,13 +108,13 @@ function prevImg() {
 
     cooldown(nextButton, prevButton)
 
-let currentBurger = getCurrentBurger()
-currentBurger.style.transition = '2s';
+    let currentBurger = getCurrentBurger()
+    currentBurger.style.transition = '2s';
 
 let anim = setInterval(() => {
 if (position >= 1400) {
     clearInterval(anim)
-    if (burgers[0] === 1) burgers[0] = 5;
+    
     burgers.push(burgers.shift() - 1)
     animationNext(position)
 } else {
