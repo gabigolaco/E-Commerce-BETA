@@ -3,21 +3,21 @@
     width: 890px;
     position: absolute;
     right: -900px;
-    top: 140px;
+    top: 110px;
 }
 #burgerTwo {
     display: none;
     width: 890px;
     position: absolute;
     right: -900px;
-    top: 140px;
+    top: 110px;
 }
 #burgerThree {
     display: none;
     width: 890px;
     position: absolute;
     right: -900px;
-    top: 150px;
+    top: 123px;
 }
 
 #burgerFour {
@@ -25,5 +25,5 @@
     width: 890px;
     position: absolute;
     right: -900px;
-    top: 140px;
+    top: 110px;
 }

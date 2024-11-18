@@ -37,11 +37,10 @@
     justify-content: space-around;
     background-color: transparent;
     position: absolute;
-    right: 27em;
-    bottom: 6em;
+    bottom: 5.4em;
     color: rgb(243, 243, 243);
     border: 0;
-    width: 500px;
+    width: 100%;
     height: 45px;
 }
 
@@ -54,10 +53,13 @@
     color: rgb(243, 243, 243);
     border-radius: 1.5px;
     font-size: 1.2em;
-    margin-left: 3em;
     cursor: pointer;
 }
 
-#burgerMenuButton {
-    display: none;
+#prevButton {
+    margin-left: 50em;
+}
+
+#nextButton {
+    margin-right: 15em;
 }
