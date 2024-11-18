@@ -4,7 +4,7 @@
 
 **<h2> (IN DEVELOPMENT)</h2>**
 
-![image](https://github.com/user-attachments/assets/3ab10feb-d288-4695-8796-268bf8c7db53)
+![Macbook-Air-127 0 0 1](https://github.com/user-attachments/assets/b01c5860-fe82-41ad-89c7-c843e1f6f41e)
 
 
 # 📂 Features
