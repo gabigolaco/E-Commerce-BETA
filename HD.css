@@ -1,0 +1,61 @@
+#menu {
+    font-size: 1em;
+}
+
+header {
+    width: 100%;
+}
+
+#logo {
+    width: 130px; 
+    left: 60px;
+}
+
+#orderButton {
+    font-size: 0.8em;
+    width: 150px;
+    height: 40px;
+}
+
+#readmore-container {
+    height: 70px;
+    bottom: 14.5em;
+    display: flex;
+    padding-left: 13em;
+    }
+
+#readmoreButton {
+    font-size: 0.9em;
+    width: 200px;
+    height: 40px;
+}
+
+#buttons-container-change-img {
+    gap: 5em;
+    bottom: 3.5em;
+}
+
+#burgerOne {
+    width: 600px;
+    right: -300px;
+    top: 115px;
+}
+#burgerTwo {
+    width: 600px;
+    position: absolute;
+    right: -900px;
+    top: 115px;
+}
+#burgerThree {
+    width: 600px;
+    position: absolute;
+    right: -900px;
+    top: 115px;
+}
+
+#burgerFour {
+    width: 600px;
+    position: absolute;
+    right: -900px;
+    top: 115px;
+}

@@ -35,15 +35,18 @@ let burgerFour = document.getElementById('burgerFour')
             default: return burgerOne;
         }
     }
+
+    function getWidth() {
+        return window.innerWidth
+    }
     
+
     function loadAnimation() {
         
         cooldown(nextButton, prevButton)
-    
         let position = 1200
+
         burgerOne.style.transition = '1s'
-        
-        
         burgerOne.style.left = position + 'px'
         
         let anim = setInterval(() => {
@@ -63,6 +66,7 @@ let burgerFour = document.getElementById('burgerFour')
      let position = 600
      let currentBurger = getCurrentBurger()
      currentBurger.style.transition = '2s';
+     
 
      let anim = setInterval(() => {
         if (position >= 2000) {
@@ -88,12 +92,11 @@ let burgerFour = document.getElementById('burgerFour')
         function animationNext(posicao) {
 
         let currentBurger = getCurrentBurger()
-                        cooldown(nextButton, prevButton)
+        cooldown(nextButton, prevButton)
+        debugBurger(currentBurger)
 
-                currentBurger.style.display = 'flex'
-                currentBurger.style.width = 890 + 'px'
-                burgerFour.style.width = 970 + 'px'
-                currentBurger.style.transition = '2s'
+        currentBurger.style.transition = '2s'
+
             
                 setTimeout(() => {
                     let anim = setInterval(() => {
@@ -111,6 +114,7 @@ let burgerFour = document.getElementById('burgerFour')
             let position = 600
 
             cooldown(nextButton, prevButton)
+            debugBurger(currentBurger)
 
      let currentBurger = getCurrentBurger()
      currentBurger.style.transition = '2s';
@@ -132,5 +136,27 @@ let burgerFour = document.getElementById('burgerFour')
 }, 10)
         
         }
-        
+
+function debugBurger(currentBurger) {
+
+    switch (true) {
+        case window.innerWidth > 1200 && window.innerWidth <= 1366: 
+        currentBurger.style.display = 'flex'
+        currentBurger.style.width = 653 + 'px'
+        currentBurger.style.top = 55 + 'px'
+        burgerThree.style.top = 85 + 'px'
+        burgerFour.style.top = 80 + 'px'
+        burgerFour.style.width = 690 + 'px'
+
+    break
+    case window.innerWidth > 1366 && window.innerWidth <= 1920:
+        currentBurger.style.display = 'flex'
+        currentBurger.style.width = 890 + 'px'
+        currentBurger.style.top = 110 + 'px'
+        burgerThree.style.top = 123 + 'px'
+        burgerFour.style.top = 170 + 'px'
+        burgerFour.style.width = 890 + 'px'
     }
+
+}
+         }
