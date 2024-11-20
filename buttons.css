@@ -6,6 +6,7 @@
     box-shadow: 1px -8px 50px rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
+    font-size: 0.6em;
     border-radius: 2px;
     cursor: pointer;
     width: 250px;
@@ -20,6 +21,7 @@
     box-shadow: 1px -8px 50px rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
+    font-size: 1.2em;
     border-radius: 1.5px;
     cursor: pointer;
     width: 300px;
@@ -57,9 +59,9 @@
 }
 
 #prevButton {
-    margin-left: 50em;
+    margin-left: 45em;
 }
 
 #nextButton {
-    margin-right: 15em;
+    margin-right: 16.5em;
 }
