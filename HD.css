@@ -31,8 +31,17 @@ header {
 }
 
 #buttons-container-change-img {
-    gap: 5em;
+    gap: 1em;
     bottom: 3.5em;
+}
+
+#prevButton {
+margin-left: 30em;
+}
+
+#nextButton {
+    margin-right: 10em;
+    padding: 0 20px 0 20px;
 }
 
 #burgerOne {

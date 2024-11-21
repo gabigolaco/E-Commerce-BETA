@@ -117,3 +117,13 @@ header {
     top: 0; 
     left: 60px;
 }
+
+#prevButton {
+    margin-left: 45em;
+
+}
+
+#nextButton {
+    margin-right: 16.5em;
+
+}

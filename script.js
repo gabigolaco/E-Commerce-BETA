@@ -36,30 +36,44 @@ let burgerFour = document.getElementById('burgerFour')
         }
     }
 
-    function getWidth() {
-        return window.innerWidth
-    }
-    
-
     function loadAnimation() {
         
         cooldown(nextButton, prevButton)
+
+        let width = window.innerWidth
         let position = 1200
 
         burgerOne.style.transition = '1s'
         burgerOne.style.left = position + 'px'
         
-        let anim = setInterval(() => {
+        
+        switch (true) {
+            case width >= 1366 && width < 1920:
                 burgerOne.style.display = 'flex'
-                if (position <= 850) {
-                    clearInterval(anim)
-                } else {
-                    position -= 30
-                    burgerOne.style.left = position + 'px'
-                    console.log(position)
-                }
-        }, 10)
+                burgerOne.style.top = 105 + 'px'
+                let animFor1366 = setInterval(() => {
+                    if (position <= 580) {
+                        clearInterval(animFor1366)
+                    } else {
+                        position -= 30
+                        burgerOne.style.left = position + 'px'
+                    }
+            }, 10)
+            break
+            case width >= 1920 && width < 2048:
+                burgerOne.style.top = 110 + 'px'
+                burgerOne.style.display = 'flex'
+                let animFor1920 = setInterval(() => {
+                    burgerOne.style.display = 'flex'
+                    if (position <= 800) {
+                        clearInterval(animFor1920)
+                    } else {
+                        position -= 30
+                        burgerOne.style.left = position + 'px'
+                    }
+            }, 10)
         }
+    }
 
  function nextImg() {
      cooldown(nextButton, prevButton)
@@ -93,6 +107,7 @@ let burgerFour = document.getElementById('burgerFour')
 
         let currentBurger = getCurrentBurger()
         cooldown(nextButton, prevButton)
+        let position = returnPosition()
         debugBurger(currentBurger)
 
         currentBurger.style.transition = '2s'
@@ -136,6 +151,17 @@ let burgerFour = document.getElementById('burgerFour')
 }, 10)
         
         }
+
+function returnPosition() {
+    switch(true) {
+        case window.innerWidth >= 1366 && window.innerWidth < 1920:
+            return position = 700
+            break
+            case window.innerWidth >= 1366 && window.innerWidth < 1920:
+            return position = 600
+
+    }
+}
 
 function debugBurger(currentBurger) {
 
