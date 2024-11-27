@@ -1,4 +1,4 @@
-if (window.innerWidth > 300 && window.innerWidth < 600) {
+if (window.innerWidth > 400 && window.innerWidth < 700) {
 
 let burgers = [1]
 let burgerOne = document.getElementById('burgerOne')   

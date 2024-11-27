@@ -48,9 +48,21 @@ let burgerFour = document.getElementById('burgerFour')
         
         
         switch (true) {
+            case width >= 1280 && width < 1920:
+                burgerOne.style.display = 'flex'
+                burgerOne.style.top = 70 + 'px'
+                let animFor1280 = setInterval(() => {
+                    if (position <= 580) {
+                        clearInterval(animFor1280)
+                    } else {
+                        position -= 30
+                        burgerOne.style.left = position + 'px'
+                    }
+            }, 10)
+            break
             case width >= 1366 && width < 1920:
                 burgerOne.style.display = 'flex'
-                burgerOne.style.top = 105 + 'px'
+                burgerOne.style.top = 50 + 'px'
                 let animFor1366 = setInterval(() => {
                     if (position <= 580) {
                         clearInterval(animFor1366)
@@ -77,11 +89,10 @@ let burgerFour = document.getElementById('burgerFour')
 
  function nextImg() {
      cooldown(nextButton, prevButton)
-     let position = 600
+     
      let currentBurger = getCurrentBurger()
      currentBurger.style.transition = '2s';
-     
-
+     let position = returnPosition()
      let anim = setInterval(() => {
         if (position >= 2000) {
             clearInterval(anim)
@@ -106,16 +117,14 @@ let burgerFour = document.getElementById('burgerFour')
         function animationNext(posicao) {
 
         let currentBurger = getCurrentBurger()
-        cooldown(nextButton, prevButton)
-        let position = returnPosition()
         debugBurger(currentBurger)
-
+        cooldown(nextButton, prevButton)
         currentBurger.style.transition = '2s'
 
             
                 setTimeout(() => {
                     let anim = setInterval(() => {
-                        if (posicao <= 775) {
+                        if (posicao <= 560) {
                             clearInterval(anim)
                         } else {
                             posicao -= 15
@@ -125,13 +134,13 @@ let burgerFour = document.getElementById('burgerFour')
                 }, 1500);
         }
         
-        function prevImg() {
-            let position = 600
+function prevImg() {
+    let position = returnPosition()
+    let currentBurger = getCurrentBurger()
 
-            cooldown(nextButton, prevButton)
-            debugBurger(currentBurger)
+    debugBurger(currentBurger)
+    cooldown(nextButton, prevButton)
 
-     let currentBurger = getCurrentBurger()
      currentBurger.style.transition = '2s';
 
      let anim = setInterval(() => {
@@ -153,12 +162,14 @@ let burgerFour = document.getElementById('burgerFour')
         }
 
 function returnPosition() {
+
     switch(true) {
-        case window.innerWidth >= 1366 && window.innerWidth < 1920:
-            return position = 700
+        case window.innerWidth >= 1280 && window.innerWidth < 1366:
+            return 600
             break
             case window.innerWidth >= 1366 && window.innerWidth < 1920:
-            return position = 600
+            return 600
+            break
 
     }
 }
@@ -166,23 +177,54 @@ function returnPosition() {
 function debugBurger(currentBurger) {
 
     switch (true) {
-        case window.innerWidth > 1200 && window.innerWidth <= 1366: 
+        case window.innerWidth >= 1280 && window.innerWidth < 1366: 
         currentBurger.style.display = 'flex'
-        currentBurger.style.width = 653 + 'px'
-        currentBurger.style.top = 55 + 'px'
-        burgerThree.style.top = 85 + 'px'
-        burgerFour.style.top = 80 + 'px'
-        burgerFour.style.width = 690 + 'px'
+        currentBurger.style.width = 560 + 'px'
+        currentBurger.style.top = 65 + 'px'
+        burgerThree.style.width = 630 + 'px'
+        burgerThree.style.top = 10 + 'px'
+        burgerFour.style.top = 20 + 'px'
+        burgerFour.style.width = 660 + 'px'
 
     break
-    case window.innerWidth > 1366 && window.innerWidth <= 1920:
+    case window.innerWidth >= 1366 && window.innerWidth <= 1920:
         currentBurger.style.display = 'flex'
-        currentBurger.style.width = 890 + 'px'
-        currentBurger.style.top = 110 + 'px'
-        burgerThree.style.top = 123 + 'px'
-        burgerFour.style.top = 170 + 'px'
-        burgerFour.style.width = 890 + 'px'
+        currentBurger.style.width = 560 + 'px'
+        currentBurger.style.top = 70 + 'px'
+        burgerThree.style.width = 630 + 'px'
+        burgerThree.style.top = 30 + 'px'
+        burgerFour.style.top = 30 + 'px'
+        burgerFour.style.width = 660 + 'px'
     }
 
 }
+
+function debugImage() {
+    let width = window.innerWidth;
+    let background = document.getElementById('background');
+
+
+    switch(true) {
+        case width >= 400 && width < 700:
+        background.style.backgroundImage = "url('imgs/Novo\ Projeto.png')";
+        break;
+        case width >= 1366 && width < 1920:
+        background.style.backgroundImage = "url('imgs/backgroundHD.png.png')";
+        break;
+        case width >=1920 && width < 2048:
+        background.style.backgroundImage = "url('imgs/background-fullHD.png')";
+        break;
+    }}
+
+    document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && (event.key === '=' || event.key === '-' || event.key === '+' || event.key === '0')) {
+            event.preventDefault(); // Impede o zoom
+        }
+    });
+
+    document.addEventListener('wheel', function(event) {
+        if (event.ctrlKey) {
+            event.preventDefault(); }
+    }, { passive: false }); 
+
          }

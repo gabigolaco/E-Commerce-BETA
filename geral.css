@@ -20,12 +20,16 @@
     --red: ;
 }
 
-body {
+html, body {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #background-container {
     display: flex;
+    width: 100%;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -34,11 +38,14 @@ body {
 
 #background {
     width: 100%;
-    height: 100%;
-    background-image: url(imgs/default-background.png);
+    max-width: 1920px;
+    height: 99%;
+    background-image: url(imgs/background-fullHD.png);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     position: relative;
+    border: 10px solid black;
 }
 
 #menu {
@@ -75,7 +82,6 @@ li > a:hover {
 nav > ul > li > a::after {
 content: '';
 width: 0;
-height: 5px;
 background-color: var(--orange);
 position: absolute;
 right: 0px;
@@ -87,7 +93,7 @@ nav > ul > li > a:hover::after {
     content: '';
     transition: width 0.3s ease;
     width: 100%;
-    height: 5px;
+    height: 15%;
     background-color: var(--orange);
     position: absolute;
     top: 1.1em;

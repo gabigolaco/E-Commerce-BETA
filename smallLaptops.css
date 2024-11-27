@@ -1,0 +1,50 @@
+
+#logo {
+    width: 8em; 
+    left: 5em;
+}
+
+#buttons-container-change-img {
+    bottom: 0em;
+}
+
+#background {
+    width: 100%;
+    border: 10px solid black;
+    max-width: 1280px;
+}
+
+#nextButton {
+    padding: 0 1em 0 1em;
+    height: 35px;
+}
+
+#prevButton {
+    padding: 0 1em 0 1em;
+    height: 35px;
+}
+
+#burgerOne {
+    width: 550px;
+    right: -300px;
+    top: 50px;
+}
+#burgerTwo {
+    width: 560px;
+    position: absolute;
+    right: -900px;
+    top: 50px;
+}
+#burgerThree {
+    width: 600px;
+    position: absolute;
+    right: -900px;
+    top: 50px;
+}
+
+#burgerFour {
+    width: 600px;
+    position: absolute;
+    right: -900px;
+    top: 115px;
+}
